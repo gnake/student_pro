@@ -10,7 +10,7 @@
 
   <!-- 登录主页 -->
   <welcome-file-list>
-    <welcome-file>/WEB-INF/page/login.jsp</welcome-file>
+    <welcome-file>/WEB-INF/pages/login.jsp</welcome-file>
   </welcome-file-list>
 
   <!-- 配置 Spring文件路径 -->
@@ -18,12 +18,10 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring.xml</param-value>
   </context-param>
-
   <!-- 配置spring监听器 -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
-
   <!-- 配置SpringMVC前端过滤器 -->
   <servlet>
     <servlet-name>springmvc</servlet-name>
@@ -39,7 +37,6 @@
     <servlet-name>springmvc</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
   <!-- 增加转码过滤器，解决中文乱码问题 -->
   <filter>
     <filter-name>CharacterEncodingFilter</filter-name>
@@ -57,5 +54,4 @@
     <filter-name>CharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-
 </web-app>
