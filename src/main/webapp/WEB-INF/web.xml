@@ -12,7 +12,6 @@
   <welcome-file-list>
     <welcome-file>/WEB-INF/pages/login.jsp</welcome-file>
   </welcome-file-list>
-
   <!-- 配置 Spring文件路径 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
