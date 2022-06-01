@@ -11,8 +11,8 @@
          https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- 配置视图解析器 -->
-    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/page" />
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/" />
         <property name="suffix" value=".jsp" />
     </bean>
     <!-- 静态资源配置 -->
@@ -20,4 +20,5 @@
     <!--  springmvc基础配置  -->
     <mvc:annotation-driven />
     <!-- 指定需要扫描的控制类的包   -->
+    <context:component-scan base-package="com.per.ggw.controller"/>
 </beans>
