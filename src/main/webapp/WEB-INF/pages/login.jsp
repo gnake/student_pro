@@ -8,7 +8,11 @@
 <html>
 <head>
     <title>login</title>
+    <%-- 外部css   --%>
     <link rel="stylesheet" href="<%= curPath%>/static/css/login.css">
+    <%-- js  --%>
+    <script src="<%= curPath%>/static/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="<%= curPath%>/static/js/login.js" type="text/javascript"></script>
     <style type="text/css">
         body {
             position: fixed;
@@ -27,15 +31,28 @@
             /*不重复，平铺一次*/
             background-image: url("<%= curPath%>/static/image/login_bg.jpg");
             background-position: center 0;
+            background-color: transparent;
             /*居中，靠左*/
             zoom: 1;
             /*针对IE*/
+            /*opacity: 0.5;*/
         }
     </style>
+    <script type="text/javascript">
+        //提示错误信息
+        function confirm_msg() {
+            var msg = "<%= request.getAttribute("msg")%>";
+            //如果写成msg != null会出错
+            if(msg == '用户不存在' || msg == '用户名或密码错误') {
+                document.getElementById("msg").innerHTML = msg;
+                document.getElementById("msg").style.opacity = 0.9;
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="confirm_msg()">
     <div class="con">
-        <form action="#" method="post" name="login" id="login">
+        <form name="lg" id="lg">
             <h2>学生信息系统</h2>
             <div class="login-field">
                 <img src="<%= curPath%>/static/image/user.png">
@@ -53,7 +70,10 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 管理员<input id="admin" type="radio" name="login" value="管理员"/>            </div>
             <div class="login-sub">
-                <button type="button" onclick="">登录</button>
+                <button type="button" onclick="login_func()">登录</button>
+            </div>
+            <div style="text-align: center" >
+                <p id="msg" style="color: red; font-size: 15px;" ></p>
             </div>
         </form>
     </div>

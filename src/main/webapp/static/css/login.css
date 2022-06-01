@@ -4,8 +4,9 @@
     top: 50%;
     left: 50%;
     width: 400px;
+    height: 400px;
     padding: 20px;
-    background: #635c5c;
+    background: #f2f2f2;
     box-sizing: border-box;
     transform: translate(-50%, -50%);
     box-shadow: 0 15px  25px #111;/*阴影设置*/
@@ -42,4 +43,11 @@
 }
 .login-sub {
     text-align: center;
+}
+.msg {
+    text-align: center;
+}
+.msg p {
+    font-size: 18px;
+    background: red;
 }
