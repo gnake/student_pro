@@ -15,27 +15,7 @@
     <script src="<%= curPath%>/static/js/login.js" type="text/javascript"></script>
     <style type="text/css">
         body {
-            position: fixed;
-            left: 0;
-            top: 0;
-            /*生成绝对定位，从最左上开始*/
-            width: 100%;
-            height: 100%;
-            min-width: 1000px;
-            /*屏幕宽度小于1000px时停止缩放*/
-            z-index: -1;
-            /*设置层叠顺序，保证在最底层*/
-            background-size: cover;
-            /*图像扩展足够大，覆盖背景区域*/
-            background-repeat: no-repeat;
-            /*不重复，平铺一次*/
             background-image: url("<%= curPath%>/static/image/login_bg.jpg");
-            background-position: center 0;
-            background-color: transparent;
-            /*居中，靠左*/
-            zoom: 1;
-            /*针对IE*/
-            /*opacity: 0.5;*/
         }
     </style>
     <script type="text/javascript">
@@ -45,14 +25,13 @@
             //如果写成msg != null会出错
             if(msg == '用户不存在' || msg == '用户名或密码错误') {
                 document.getElementById("msg").innerHTML = msg;
-                document.getElementById("msg").style.opacity = 0.9;
             }
         }
     </script>
 </head>
 <body onload="confirm_msg()">
     <div class="con">
-        <form name="lg" id="lg">
+        <form name="lg" id="lg" class="lg">
             <h2>学生信息系统</h2>
             <div class="login-field">
                 <img src="<%= curPath%>/static/image/user.png">

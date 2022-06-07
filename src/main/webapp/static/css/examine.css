@@ -1,0 +1,48 @@
+/*查看框架*/
+#examStuBlock {
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 740px;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#examStuHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#examStuMain {
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#examStuMain table {
+    width: 400px;
+}
+#examStuMain tr {
+    height: 40px;
+}
+.examStuTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.examStuTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.examStuTableTd2 input {
+    color: #545454;
+    width: 150px;
+    background-color: #ebebe4;
+    border: 1px solid #a9a9a9;
+}

@@ -1,0 +1,54 @@
+/*修改框架*/
+#updateStuBlock {
+    width: 420px;
+    height: 440px;
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 740px;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+
+/*新增框架头*/
+#updateStuHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*新增框架主体*/
+#updateStuMain {
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#updateStuMain table {
+    width: 400px;
+}
+#updateStuMain tr {
+    height: 40px;
+}
+.updateStuTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.updateStuTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.updateStuTableTd2 input {
+    width: 150px;
+}
+#updateStuFooter {
+    text-align: right;
+    height: 35px;
+    padding-top: 35px;
+    padding-right: 120px;
+}

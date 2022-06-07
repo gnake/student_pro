@@ -1,5 +1,6 @@
-package com.per.ggw.bean;
+package com.per.gnake.bean;
 
+//该类匹配前端登录页面表单传入的字段，单独封装为登录类
 public class Login {
     private String username;
     private String password;
@@ -21,15 +22,15 @@ public class Login {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "Login{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }
