@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.per.gnake.mapper.DectiveMapper">
+
+    <!-- 插入选课记录   -->
+    <insert id="pickCourseRecord" parameterType="Dective">
+        insert into dective (sno,cno,tno) values (#{sno}, #{cno}, #{tno})
+    </insert>
+
+    <!-- 查询插入课程是否已经选过   -->
+    <select id="IsSelectedCourse" parameterType="Dective" resultType="Integer">
+        select count(*) from dective where
+        sno = #{sno} and cno = #{cno} and tno = #{tno}
+    </select>
+
+    <!-- 退选已选的课程   -->
+    <delete id="DeleteCourse" parameterType="Dective">
+        delete  from dective
+        where sno = #{sno} and cno = #{cno} and tno = #{tno}
+    </delete>
+</mapper>
