@@ -1,0 +1,133 @@
+/*管理员页面*/
+/*查看、删除、修改的按钮*/
+.exam {
+    font-size: 16px;
+    height: 24px;
+    border: none;
+    color: black;
+    background: none;
+}
+.del {
+    font-size: 16px;
+    height: 24px;
+    border: none;
+    color: red;
+    background: none;
+}
+.upd {
+    font-size: 16px;
+    height: 24px;
+    border: none;
+    color: orange;
+    background: none;
+}
+/*学生新增*/
+#add {
+    position: relative;
+    top: 96px;
+    left: 18%;
+    height: 35px;
+    width: 70px;
+    background-color: #5cb85c;
+    color: white;
+    border: 1px solid black;
+}
+/*提交*/
+#StuSubmit {
+  height: 30px;
+  width: 75px;
+  background-color: #5cb85c;
+  color: black;
+  border: 1px solid #dadee1;
+}
+/*新增中的取消*/
+#StuAddCancel {
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+
+#examStuCancel {
+    height: 30px;
+    width: 75px;
+    background-color: #82d571;
+    color: black;
+    border: 1px solid #dadee1;
+}
+/*修改中的保存*/
+#perserveStu {
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+/*修概中的取消*/
+#updateStuCancel {
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+/*上一页*/
+#previous {
+    height: 30px;
+    width: 75px;
+    background: #5cb85c;
+    color: white;
+    border: 1px solid black;
+    float: right;
+}
+/*下一页*/
+#next {
+    height: 30px;
+    width: 75px;
+    background: #d9534f;
+    color: white;
+    border: 1px solid black;
+    float: right;
+    margin-right: 282px;
+}
+
+/*上一页*/
+#previous2 {
+    height: 30px;
+    width: 75px;
+    background: #5cb85c;
+    color: white;
+    border: 1px solid black;
+    float: right;
+}
+/*下一页*/
+#next2 {
+    height: 30px;
+    width: 75px;
+    background: #d9534f;
+    color: white;
+    border: 1px solid black;
+    float: right;
+    margin-right: 282px;
+}
+/*管理员页面*/
+
+/*学生页面*/
+#choose {
+    font-size: 16px;
+    height: 24px;
+    border: none;
+    color: green;
+    background: none;
+}
+#eixt_race {
+    font-size: 16px;
+    height: 24px;
+    border: none;
+    color: red;
+    background: none;
+}
+/*学生页面*/
