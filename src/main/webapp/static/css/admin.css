@@ -1,0 +1,190 @@
+html body {
+    margin: 0;
+    padding: 0;
+}
+
+/*头部*/
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    padding: 10px;
+    background: #ebf3dd;
+    opacity: 0.9;
+    z-index: -5;
+}
+.header img {
+    width: 62px;
+    height: 62px;
+    padding-top: 24px;
+    padding-left: 8px;
+    float: left;
+    z-index: -2;
+}
+.header h2 {
+    padding-top: 20px;
+    padding-left: 5px;
+    margin-left: 12px;
+    font-size: 25px;
+    color: #FF78BB;
+    float: left;
+    z-index: -2;
+}
+.header p {
+    font-size: 20px;
+    padding-right: 80px;
+    padding-top: 24px;
+    float: right;
+}
+.header a {
+    color: lightgreen;
+}
+.header a:hover {
+    color: #f1f1f1;
+}
+
+/*内容*/
+.abody {
+    padding: 3px;
+    position: absolute;
+    top: 142px;
+    left: 0;
+    width: 100%;
+    height: 840px;
+}
+.abody_l {
+    width: 12%;
+    height: 800px;
+    float: left;
+    background: #f1f1f1;
+}
+.abody_r {
+    float: left;
+    height: 800px;
+    width: 87.5%;
+    background: #f2f2f2;
+    margin-left: 5px;
+}
+.abody_l a {
+    height: 80px;
+    padding: 20px 16px ;
+    margin-top: 2px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #000;
+    display: block;
+    text-align: center;
+}
+.abody_l a:hover {
+    background: #555;
+    color: white;
+}
+
+.col {
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+    text-align: center;
+}
+.addb {
+    display: none;
+}
+/*表格*/
+#stu table {
+    position: relative;
+    top: 100px;
+    left: 18%;
+    width: 1100px;
+    height: 500px;
+    border-collapse: collapse;
+}
+
+#stu table td, table th {
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+    text-align: center;
+}
+#stu table thead th {
+    background-color: #CCE8EB;
+    width: 100px;
+}
+#stu table tr:nth-child(odd) {
+    background: #fff;
+}
+#stu table tr:nth-child(even) {
+    background: #F5FAFA;
+}
+
+#tea table {
+    position: relative;
+    top: 100px;
+    left: 18%;
+    width: 1100px;
+    height: 500px;
+    border-collapse: collapse;
+}
+
+#tea table td, table th {
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+    text-align: center;
+}
+#tea table thead th {
+    background-color: #CCE8EB;
+    width: 100px;
+}
+#tea table tr:nth-child(odd) {
+    background: #fff;
+}
+#tea table tr:nth-child(even) {
+    background: #F5FAFA;
+}
+
+#cou table {
+    position: relative;
+    top: 100px;
+    left: 18%;
+    width: 1100px;
+    height: 500px;
+    border-collapse: collapse;
+}
+
+#cou table td, table th {
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+    text-align: center;
+}
+#cou table thead th {
+    background-color: #CCE8EB;
+    width: 100px;
+}
+#cou table tr:nth-child(odd) {
+    background: #fff;
+}
+#cou table tr:nth-child(even) {
+    background: #F5FAFA;
+}
+
+#final {
+    margin-top: 105px;
+    margin-left: 310px;
+    height: 45px;
+    display: none;
+}
+#final p {
+    display: inline;
+}
+.stu {
+    display: none;
+}
+.tea {
+    display: none;
+}
+.cou {
+    display: none;
+}
