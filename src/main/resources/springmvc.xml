@@ -20,5 +20,5 @@
     <!--  springmvc基础配置  -->
     <mvc:annotation-driven />
     <!-- 指定需要扫描的控制类的包   -->
-    <context:component-scan base-package="com.per.ggw.controller"/>
+    <context:component-scan base-package="com.per.gnake.controller"/>
 </beans>

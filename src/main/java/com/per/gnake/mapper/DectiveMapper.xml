@@ -20,4 +20,10 @@
         delete  from dective
         where sno = #{sno} and cno = #{cno} and tno = #{tno}
     </delete>
+
+    <!-- 录入成绩,   -->
+    <update id="updateScore" parameterType="Dective">
+        update dective set score = #{score}
+        where sno = #{sno} and cno = #{cno} and tno = #{tno}
+    </update>
 </mapper>

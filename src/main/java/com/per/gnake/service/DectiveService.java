@@ -8,4 +8,6 @@ public interface DectiveService {
     int IsSelectedCourse(Dective dective);
 
     int DeleteCourse(Dective dective);
+
+    int updateScore(Dective dective);
 }

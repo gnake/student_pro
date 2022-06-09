@@ -30,4 +30,9 @@ public class DectiveServiceImpl implements DectiveService {
     public int DeleteCourse(Dective dective) {
         return dectiveDao.DeleteCourse(dective);
     }
+
+    @Override
+    public int updateScore(Dective dective) {
+        return dectiveDao.updateScore(dective);
+    }
 }

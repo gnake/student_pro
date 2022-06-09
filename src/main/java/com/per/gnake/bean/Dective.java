@@ -4,9 +4,9 @@ public class Dective {
     private String sno;
     private String tno;
     private String cno;
-    private String score;
+    private int score;
 
-    public Dective(String sno, String tno, String cno, String socre) {
+    public Dective(String sno, String tno, String cno, int socre) {
         this.sno = sno;
         this.tno = tno;
         this.cno = cno;
@@ -41,11 +41,11 @@ public class Dective {
         this.cno = cno;
     }
 
-    public String getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(int score) {
         this.score = score;
     }
 

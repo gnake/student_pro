@@ -22,4 +22,9 @@ public class DectiveDaoImpl implements DectiveDao {
     public int DeleteCourse(Dective dective) {
         return dectiveMapper.DeleteCourse(dective);
     }
+
+    @Override
+    public int updateScore(Dective dective) {
+        return dectiveMapper.updateScore(dective);
+    }
 }

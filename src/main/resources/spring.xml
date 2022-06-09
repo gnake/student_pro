@@ -24,17 +24,36 @@
         <!--   加载MyBatis配置文件    -->
         <property name="configLocation" value="classpath:mybatis.xml"/>
         <!--    加载mapper文件（类路径）   -->
-        <property name="mapperLocations" value="classpath:com/per/ggw/mapper/*.xml"/>
+        <property name="mapperLocations" value="classpath:com/per/gnake/mapper/*.xml"/>
     </bean>
     <!-- 配置mapper相关扫描器 将MyBatis的SQLSessionFactory交给Spring -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 指定批量产生mapper的包 -->
-        <property name="basePackage" value="com.per.ggw.mapper"/>
+        <property name="basePackage" value="com.per.gnake.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
     <!-- 依赖注入   -->
-    <bean id="studentDao" class="com.per.ggw.dao.impl.StudentDaoImpl"/>
-    <bean id="studentService" class="com.per.ggw.service.impl.StudentServiceImpl">
+    <!--  学生  -->
+    <bean id="studentDao" class="com.per.gnake.dao.impl.StudentDaoImpl"/>
+    <bean id="studentService" class="com.per.gnake.service.impl.StudentServiceImpl">
         <property name="studentDao" ref="studentDao"/>
+    </bean>
+
+    <!-- 老师   -->
+    <bean id="teacherDao" class="com.per.gnake.dao.impl.TeacherDaoImpl"/>
+    <bean id="teacherService" class="com.per.gnake.service.impl.TeacherServiceImpl">
+        <property name="teacherDao" ref="teacherDao"/>
+    </bean>
+
+    <!--  管理员  -->
+    <bean id="adminDao" class="com.per.gnake.dao.impl.AdminDaoImpl"/>
+    <bean id="adminService" class="com.per.gnake.service.impl.AdminServiceImpl">
+        <property name="adminDao" ref="adminDao"/>
+    </bean>
+
+    <!-- 选课表   -->
+    <bean id="dectiveDao" class="com.per.gnake.dao.impl.DectiveDaoImpl"/>
+    <bean id="dectiveService" class="com.per.gnake.service.impl.DectiveServiceImpl">
+        <property name="dectiveDao" ref="dectiveDao"/>
     </bean>
 </beans>

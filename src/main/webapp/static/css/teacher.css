@@ -81,7 +81,9 @@ html body {
     background: #555;
     color: white;
 }
-
+#resultInputBlock {
+    display: none;
+}
 /*表格*/
 table {
     position: relative;
@@ -111,4 +113,24 @@ table tr:nth-child(even) {
 
 .teainfo {
     display: none;
+}
+
+/*修改信息*/
+#updateMy {
+    width: 500px;
+    height: 400px;
+    margin-top: 150px;
+    margin-left: 560px;
+    display: none;
+}
+
+/*分页*/
+#final {
+    margin-top: 105px;
+    margin-left: 310px;
+    height: 45px;
+    display: none;
+}
+#final p {
+    display: inline;
 }

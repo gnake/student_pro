@@ -1,4 +1,4 @@
-package com.per.ggw.bean;
+package com.per.gnake.bean;
 
 public class Student {
     private String sno;//学号

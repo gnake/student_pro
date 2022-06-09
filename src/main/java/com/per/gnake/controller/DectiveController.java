@@ -3,11 +3,13 @@ package com.per.gnake.controller;
 import com.per.gnake.bean.Dective;
 import com.per.gnake.bean.Teacher;
 import com.per.gnake.bean.Vo.CourseVo1;
+import com.per.gnake.bean.Vo.Score;
 import com.per.gnake.service.DectiveService;
+import com.per.gnake.service.StudentService;
 import com.per.gnake.service.TeacherService;
-import org.apache.ibatis.javassist.expr.NewArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,6 +21,8 @@ public class DectiveController {
     private DectiveService dectiveService;
     @Autowired
     private TeacherService teacherService;
+    @Autowired
+    private StudentService studentService;
 
 
     //学生选课
@@ -82,4 +86,29 @@ public class DectiveController {
             return "error";
         }
     }
+
+
+    //录入成绩
+    @ResponseBody
+    @RequestMapping("/inputScore")
+    public String inputScore(Score score, Model model) {
+//        System.out.println(score);
+        String sno = score.getSno();
+        String cno = score.getCno();
+        String tno = score.getTno();
+        int achievement = score.getScore();
+        Dective dective = new Dective(sno,tno,cno,achievement);
+
+        int rows = dectiveService.updateScore(dective);
+
+        if(rows > 0) {
+//            System.out.println("录入成绩成功");
+            return "success";
+        } else {
+            System.out.println("录入成绩失败");
+            return "error";
+        }
+
+    }
+
 }
