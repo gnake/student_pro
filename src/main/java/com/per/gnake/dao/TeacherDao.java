@@ -16,4 +16,10 @@ public interface TeacherDao {
     Teacher queryTeacherByName(String tname);
 
     List<Score> queryTeacherNeedInputScore(String tno);
+
+    int deleteTeacher(String tno);
+
+    int addTeacher(Teacher teacher);
+
+    int updateTeacher(Teacher teacher);
 }

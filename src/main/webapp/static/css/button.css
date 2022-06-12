@@ -32,6 +32,7 @@
     color: white;
     border: 1px solid black;
 }
+/*学生*/
 /*提交*/
 #StuSubmit {
   height: 30px;
@@ -50,6 +51,43 @@
     margin-left: 5px;
 }
 
+/*老师*/
+/*提交*/
+#TeaSubmit {
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+/*新增中的取消*/
+#TeaAddCancel {
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+
+/*课程*/
+/*提交*/
+#CouSubmit {
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+/*新增中的取消*/
+#CouAddCancel {
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
 #examStuCancel {
     height: 30px;
     width: 75px;
@@ -57,7 +95,22 @@
     color: black;
     border: 1px solid #dadee1;
 }
-/*修改中的保存*/
+#examTeaCancel {
+    height: 30px;
+    width: 75px;
+    background-color: #82d571;
+    color: black;
+    border: 1px solid #dadee1;
+}
+#examCouCancel {
+    height: 30px;
+    width: 75px;
+    background-color: #82d571;
+    color: black;
+    border: 1px solid #dadee1;
+}
+/*修改中的保存和取消*/
+/*学生*/
 #perserveStu {
     height: 30px;
     width: 75px;
@@ -65,7 +118,6 @@
     color: black;
     border: 1px solid #dadee1;
 }
-/*修概中的取消*/
 #updateStuCancel {
     height: 30px;
     width: 75px;
@@ -74,6 +126,39 @@
     border: 1px solid #dadee1;
     margin-left: 5px;
 }
+/*老师*/
+#perserveTea {
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+#updateTeaCancel {
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+/*课程*/
+#perserveCou {
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+#updateCouCancel {
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+/*student*/
 /*上一页*/
 #previous {
     height: 30px;
@@ -93,7 +178,7 @@
     float: right;
     margin-right: 282px;
 }
-
+/*teacher*/
 /*上一页*/
 #previous2 {
     height: 30px;
@@ -105,6 +190,26 @@
 }
 /*下一页*/
 #next2 {
+    height: 30px;
+    width: 75px;
+    background: #d9534f;
+    color: white;
+    border: 1px solid black;
+    float: right;
+    margin-right: 282px;
+}
+/*admin*/
+/*上一页*/
+#previous3 {
+    height: 30px;
+    width: 75px;
+    background: #5cb85c;
+    color: white;
+    border: 1px solid black;
+    float: right;
+}
+/*下一页*/
+#next3 {
     height: 30px;
     width: 75px;
     background: #d9534f;

@@ -56,4 +56,10 @@
     <bean id="dectiveService" class="com.per.gnake.service.impl.DectiveServiceImpl">
         <property name="dectiveDao" ref="dectiveDao"/>
     </bean>
+
+    <!--  课程  -->
+    <bean id="courseDao" class="com.per.gnake.dao.impl.CourseDaoImpl"/>
+    <bean id="courseService" class="com.per.gnake.service.impl.CourseServiceImpl">
+        <property name="courseDao" ref="courseDao"/>
+    </bean>
 </beans>

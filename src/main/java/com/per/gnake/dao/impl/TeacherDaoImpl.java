@@ -36,4 +36,19 @@ public class TeacherDaoImpl implements TeacherDao {
     public List<Score> queryTeacherNeedInputScore(String tno) {
         return teacherMapper.queryTeacherNeedInputScore(tno);
     }
+
+    @Override
+    public int deleteTeacher(String tno) {
+        return teacherMapper.deleteTeacher(tno);
+    }
+
+    @Override
+    public int addTeacher(Teacher teacher) {
+        return teacherMapper.addTeacher(teacher);
+    }
+
+    @Override
+    public int updateTeacher(Teacher teacher) {
+        return teacherMapper.updateTeacher(teacher);
+    }
 }

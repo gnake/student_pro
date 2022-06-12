@@ -30,4 +30,20 @@
         from student s, course c, dective d where
         d.tno = #{tno} and d.sno = s.sno and d.cno = c.cno order by c.cno, s.sno
     </select>
+
+    <!-- 删除   -->
+    <delete id="deleteTeacher" parameterType="String">
+        delete from teacher where tno = #{tno}
+    </delete>
+
+    <!-- 增加   -->
+    <insert id="addTeacher" parameterType="Teacher">
+        insert into teacher (tno, tname, tsex, ttitle) values
+        (#{tno}, #{tname}, #{tsex}, #{ttitle})
+    </insert>
+
+    <!-- 修改   -->
+    <update id="updateTeacher" parameterType="Teacher">
+        update teacher set tname = #{tname}, tsex = #{tsex}, ttitle = #{ttitle} where tno = #{tno}
+    </update>
 </mapper>

@@ -41,4 +41,19 @@ public class TeacherServiceImpl implements TeacherService {
     public List<Score> queryTeacherNeedInputScore(String tno) {
         return teacherDao.queryTeacherNeedInputScore(tno);
     }
+
+    @Override
+    public int deleteTeacher(String tno) {
+        return teacherDao.deleteTeacher(tno);
+    }
+
+    @Override
+    public int addTeacher(Teacher teacher) {
+        return teacherDao.addTeacher(teacher);
+    }
+
+    @Override
+    public int updateTeacher(Teacher teacher) {
+        return teacherDao.updateTeacher(teacher);
+    }
 }

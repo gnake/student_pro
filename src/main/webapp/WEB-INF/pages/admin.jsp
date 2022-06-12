@@ -2,7 +2,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.per.gnake.bean.Student" %>
 <%@ page import="com.per.gnake.bean.Teacher" %>
-<%@ page import="com.per.gnake.bean.Vo.CourseVo1" %>
 <%@ page import="com.per.gnake.bean.Course" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
@@ -150,8 +149,6 @@
                     <button id="StuAddCancel" onclick="StuAddCancel()">取消</button>
                 </div>
             </div>
-
-
         <%-- 学生查看  --%>
         <div id="examStuBlock">
             <div id="examStuHeader">查看学生信息</div>
@@ -252,8 +249,8 @@
             </div>
         </div>
         <%--  老师    --%>
-            <div id="tea" class="tea">
-        <table>
+        <div id="tea" class="tea">
+        <table id="teaT">
             <thead>
             <tr>
                 <th>序号</th>
@@ -280,9 +277,9 @@
                 <td><%= it.getTsex()%></td>
                 <td><%= it.getTtitle()%></td>
                 <td>
-                    <input class="exam" type="button" value="查看"/>
-                    <input class="del" type="button" value="删除"/>
-                    <input class="upd" type="button" value="修改"/>
+                    <input id="ExaTea" class="exam" type="button" value="查看" onclick="examineTea(this)"/>
+                    <input id="DelTea" class="del" type="button" value="删除" onclick="deleteTea(this)"/>
+                    <input id="UpdTea" class="upd" type="button" value="修改" onclick="updateTea(this)"/>
                 </td>
             </tr>
             <%
@@ -291,11 +288,126 @@
             </tbody>
         </table>
     </div>
+        <div id="final2">
+            <p>第</p>
+            <p id="pageNum2">1</p>
+            <P>页，共</P>
+            <p id="nums2">0</p>
+            <p>条，(每页显示6条)</p>
+            <button id="next2" onclick="next()">下一页</button>
+            <button id="previous2" onclick="previous()">上一页</button>
+        </div>
 
-
-        <%--  管理员    --%>
-            <div id="cou" class="cou">
-        <table>
+        <%--增加老师--%>
+        <div id="TeaAddBlock">
+            <div id="TeaAddHeader">新增老师信息</div>
+            <div id="TeaAddMain">
+                <table id="TeaAddMsgTable">
+                    <tr>
+                        <td class="TeaAddTableTd1">职工号</td>
+                        <td class="TeaAddTableTd2"><input type="text" id="teaTno1"></td>
+                    </tr>
+                    <tr>
+                        <td class="TeaAddTableTd1">姓名</td>
+                        <td class="TeaAddTableTd2"><input type="text" id="teaTname1"></td>
+                    </tr>
+                    <tr>
+                        <td class="TeaAddTableTd1">性别</td>
+                        <td class="TeaAddTableTd2">
+                            <select id="teaTsex1">
+                                <option value="男" selected>男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="TeaAddTableTd1">职称</td>
+                        <td class="TeaAddTableTd2"><input type="text" id="teaTtitle1"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="TeaAddFoot">
+                <button id="TeaSubmit" onclick="TeaSubmit()">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="TeaAddCancel" onclick="TeaAddCancel()">取消</button>
+            </div>
+        </div>
+        <%-- 老师查看  --%>
+        <div id="examTeaBlock">
+            <div id="examTeaHeader">查看老师信息</div>
+            <div id="examTeaMain">
+                <table id="examTeaMsgTable">
+                    <tr>
+                        <td class="examTeaTableTd1">职工号</td>
+                        <td class="examTeaTableTd2">
+                            <input type="text" id="teaTno2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="examTeaTableTd1">姓名</td>
+                        <td class="examTeaTableTd2">
+                            <input type="text" id="teaTname2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="examTeaTableTd1">性别</td>
+                        <td class="examTeaTableTd2">
+                            <input type="text" id="teaTsex2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="examTeaTableTd1">职称</td>
+                        <td class="examTeaTableTd2">
+                            <input type="text" id="teaTtitle2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="examTeaFooter" style="text-align: right; height: 60px; padding-top: 5px; padding-right: 100px">
+                <button id="examTeaCancel" onclick="examTeaCancel()">取消</button>
+            </div>
+        </div>
+        <%--修改老师信息--%>
+        <div id="updateTeaBlock">
+            <div id="updateTeaHeader">修改老师信息</div>
+            <div id="updateTeaMain">
+                <table id="updateTeaTable">
+                    <tr>
+                        <td class="updateTeaTableTd1">职工号</td>
+                        <td class="updateTeaTableTd2">
+                            <input type="text" id="teaTno3" readonly = "readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="updateTeaTableTd1">姓名</td>
+                        <td class="updateTeaTableTd2">
+                            <input type="text" id="teaTname3"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="updateTeaTableTd1">性别</td>
+                        <td class="updateTeaTableTd2">
+                            <select id="teaTsex3">
+                                <option value="男" selected>男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="updateTeaTableTd1">职称</td>
+                        <td class="updateTeaTableTd2">
+                            <input type="text" id="teaTtitle3"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="updateTeaFooter">
+                <button id="perserveTea" onclick="perserveTea()">保存</button>
+                <button id="updateTeaCancel" onclick="updateTeaCancel()">取消</button>
+            </div>
+        </div>
+        <%--  课程    --%>
+        <div id="cou" class="cou">
+        <table id="couT">
             <thead>
             <tr>
                 <th>序号</th>
@@ -322,9 +434,9 @@
                 <td><%= it.getCtime()%></td>
                 <td><%= it.getCcredit()%></td>
                 <td>
-                    <input class="exam" type="button" value="查看"/>
-                    <input class="del" type="button" value="删除"/>
-                    <input class="upd" type="button" value="修改"/>
+                    <input id="ExaCou" class="exam" type="button" value="查看" onclick="examineCou(this)"/>
+                    <input id="DelCou" class="del" type="button" value="删除" onclick="deleteCou(this)"/>
+                    <input id="UpdCou" class="upd" type="button" value="修改" onclick="updateCou(this)"/>
                 </td>
             </tr>
             <%
@@ -332,6 +444,118 @@
             %>
             </tbody>
         </table>
+        </div>
+        <div id="final3">
+            <p>第</p>
+            <p id="pageNum3">1</p>
+            <P>页，共</P>
+            <p id="nums3">0</p>
+            <p>条，(每页显示6条)</p>
+            <button id="next3" onclick="next()">下一页</button>
+            <button id="previous3" onclick="previous()">上一页</button>
+        </div>
+        <%--增加老师--%>
+        <div id="CouAddBlock">
+            <div id="CouAddHeader">新增课程信息</div>
+            <div id="CouAddMain">
+                <table id="CouAddMsgTable">
+                    <tr>
+                        <td class="CouAddTableTd1">课程号</td>
+                        <td class="CouAddTableTd2"><input type="text" id="couCno1"></td>
+                    </tr>
+                    <tr>
+                        <td class="CouAddTableTd1">课程名</td>
+                        <td class="CouAddTableTd2"><input type="text" id="couCname1"></td>
+                    </tr>
+                    <tr>
+                        <td class="CouAddTableTd1">学分</td>
+                        <td class="CouAddTableTd2"><input type="text" id="couCtime1"></td>
+                    </tr>
+                    <tr>
+                        <td class="CouAddTableTd1">学时</td>
+                        <td class="CouAddTableTd2"><input type="text" id="couCcredit1"></td>
+                    </tr>
+                    <tr>
+                        <td class="TeaAddTableTd1">任课教师号</td>
+                        <td class="TeaAddTableTd2"><input type="text" id="couCtno1"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="CouAddFoot">
+                <button id="CouSubmit" onclick="CouSubmit()">提交</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="CouAddCancel" onclick="CouAddCancel()">取消</button>
+            </div>
+        </div>
+        <%-- 老师查看  --%>
+        <div id="examCouBlock">
+            <div id="examCouHeader">查看课程信息</div>
+            <div id="examCouMain">
+                <table id="examCouMsgTable">
+                    <tr>
+                        <td class="examCouTableTd1">课程号</td>
+                        <td class="examCouTableTd2">
+                            <input type="text" id="couCno2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="examCouTableTd1">课程名</td>
+                        <td class="examCouTableTd2">
+                            <input type="text" id="couCname2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="examCouTableTd1">学时</td>
+                        <td class="examCouTableTd2">
+                            <input type="text" id="couCtime2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="examCouTableTd1">学分</td>
+                        <td class="examCouTableTd2">
+                            <input type="text" id="couCcredit2" readonly="readonly"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="examCouFooter" style="text-align: right; height: 50px; padding-top: 5px; padding-right: 100px">
+                <button id="examCouCancel" onclick="examCouCancel()">取消</button>
+            </div>
+        </div>
+        <%--修改课程信息--%>
+        <div id="updateCouBlock">
+            <div id="updateCouHeader">修改课程信息</div>
+            <div id="updateCouMain">
+                <table id="updateCouTable">
+                    <tr>
+                        <td class="updateCouTableTd1">课程号</td>
+                        <td class="updateCouTableTd2">
+                            <input type="text" id="couCno3" readonly = "readonly"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="updateCouTableTd1">课程名</td>
+                        <td class="updateCouTableTd2">
+                            <input type="text" id="couCname3"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="updateCouTableTd1">学时</td>
+                        <td class="updateCouTableTd2">
+                            <input type="text" id="couCtime3"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="updateCouTableTd1">学分</td>
+                        <td class="updateCouTableTd2">
+                            <input type="text" id="couCcredit3"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="updateCouFooter">
+                <button id="perserveCou" onclick="perserveCou()">保存</button>
+                <button id="updateCouCancel" onclick="updateCouCancel()">取消</button>
+            </div>
         </div>
     </div>
 </div>

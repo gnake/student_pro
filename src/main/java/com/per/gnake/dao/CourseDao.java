@@ -1,8 +1,8 @@
-package com.per.gnake.service;
+package com.per.gnake.dao;
 
 import com.per.gnake.bean.Course;
 
-public interface CourseService {
+public interface CourseDao {
     int deleteCourse(String cno);
 
     int addCourse(Course course);

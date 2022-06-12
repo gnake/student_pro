@@ -1,4 +1,5 @@
 /*查看框架*/
+/*学生*/
 #examStuBlock {
     width: 420px;
     height: 400px;
@@ -41,6 +42,106 @@
     text-align: left;
 }
 .examStuTableTd2 input {
+    color: #545454;
+    width: 150px;
+    background-color: #ebebe4;
+    border: 1px solid #a9a9a9;
+}
+/*老师*/
+#examTeaBlock {
+    width: 420px;
+    height: 360px;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 740px;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#examTeaHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#examTeaMain {
+    height: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#examTeaMain table {
+    width: 400px;
+    margin-top: 6%;
+    margin-left: 15px;
+}
+#examTeaMain tr {
+    height: 40px;
+}
+.examTeaTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.examTeaTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.examTeaTableTd2 input {
+    color: #545454;
+    width: 150px;
+    background-color: #ebebe4;
+    border: 1px solid #a9a9a9;
+}
+/*课程*/
+#examCouBlock {
+    width: 420px;
+    height: 360px;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 740px;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#examCouHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#examCouMain {
+    height: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#examCouMain table {
+    width: 400px;
+    margin-top: 6%;
+    margin-left: 15px;
+}
+#examCouMain tr {
+    height: 40px;
+}
+.examCouTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.examCouTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.examCouTableTd2 input {
     color: #545454;
     width: 150px;
     background-color: #ebebe4;

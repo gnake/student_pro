@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -47,6 +48,42 @@ public class TeacherController {
             model.addAttribute("msg","用户不存在");
             System.out.println("用户不存在");
             return "login";
+        }
+    }
+
+    //删除老师
+    @ResponseBody
+    @RequestMapping("/deleteTeacher")
+    public String deleteTeacher(String tno) {
+        int row = teacherService.deleteTeacher(tno);
+        if(row > 0) {
+            return "success";
+        } else {
+            return "error";
+        }
+    }
+
+    //增加老师
+    @ResponseBody
+    @RequestMapping("/addTeacher")
+    public String addTeacher(Teacher teacher) {
+        int row = teacherService.addTeacher(teacher);
+        if(row > 0) {
+            return "success";
+        } else {
+            return "error";
+        }
+    }
+
+    //修改
+    @ResponseBody
+    @RequestMapping("/updateTeacher")
+    public String updateTeacher(Teacher teacher) {
+        int row = teacherService.updateTeacher(teacher);
+        if(row > 0) {
+            return "success";
+        } else {
+            return "error";
         }
     }
 }

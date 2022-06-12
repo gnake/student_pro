@@ -62,3 +62,113 @@
 .StuAddTableTd2 input {
     width: 150px;
 }
+
+/*老师*/
+/*新增*/
+#TeaAddBlock {
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#TeaAddHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#TeaAddMain {
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#TeaAddFoot {
+    text-align: right;
+    height: 35px;
+    padding-top: 4px;
+    padding-right: 100px;
+}
+#TeaAddMain table {
+    width: 400px;
+    margin-left: 4%;
+    margin-top: 8%;
+    height: 75%;
+}
+#TeaAddMain tr {
+    height: 40px;
+}
+.TeaAddTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.TeaAddTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.TeaAddTableTd2 input {
+    width: 150px;
+}
+
+/*课程*/
+/*新增*/
+#CouAddBlock {
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#CouAddHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#CouAddMain {
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#CouAddFoot {
+    text-align: right;
+    height: 35px;
+    padding-top: 4px;
+    padding-right: 100px;
+}
+#CouAddMain table {
+    width: 400px;
+    margin-left: 5%;
+    margin-top: 6%;
+    height: 75%;
+}
+#CouAddMain tr {
+    height: 40px;
+}
+.CouAddTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.CouAddTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.CouAddTableTd2 input {
+    width: 150px;
+}

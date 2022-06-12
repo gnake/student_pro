@@ -1,4 +1,5 @@
 /*修改框架*/
+/*学生*/
 #updateStuBlock {
     width: 420px;
     height: 440px;
@@ -10,7 +11,6 @@
     border-radius: 5px;
     z-index:2;
 }
-
 /*新增框架头*/
 #updateStuHeader {
     background-color: black;
@@ -47,6 +47,113 @@
     width: 150px;
 }
 #updateStuFooter {
+    text-align: right;
+    height: 35px;
+    padding-top: 35px;
+    padding-right: 120px;
+}
+
+/*老师*/
+#updateTeaBlock {
+    width: 420px;
+    height: 440px;
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 740px;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#updateTeaHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#updateTeaMain {
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#updateTeaMain table {
+    width: 360px;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+#updateTeaMain tr {
+    height: 40px;
+}
+.updateTeaTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.updateTeaTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.updateTeaTableTd2 input {
+    width: 150px;
+}
+#updateTeaFooter {
+    text-align: right;
+    height: 35px;
+    padding-top: 35px;
+    padding-right: 120px;
+}
+/*课程*/
+#updateCouBlock {
+    width: 420px;
+    height: 440px;
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 740px;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+}
+#updateCouHeader {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    height: 33px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#updateCouMain {
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#updateCouMain table {
+    width: 360px;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+#updateCouMain tr {
+    height: 40px;
+}
+.updateCouTableTd1 {
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.updateCouTableTd2 {
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.updateCouTableTd2 input {
+    width: 150px;
+}
+#updateCouFooter {
     text-align: right;
     height: 35px;
     padding-top: 35px;

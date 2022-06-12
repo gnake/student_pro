@@ -179,6 +179,24 @@ html body {
 #final p {
     display: inline;
 }
+#final2 {
+    margin-top: 105px;
+    margin-left: 310px;
+    height: 45px;
+    display: none;
+}
+#final2 p {
+    display: inline;
+}
+#final3 {
+    margin-top: 105px;
+    margin-left: 310px;
+    height: 45px;
+    display: none;
+}
+#final3 p {
+    display: inline;
+}
 .stu {
     display: none;
 }
