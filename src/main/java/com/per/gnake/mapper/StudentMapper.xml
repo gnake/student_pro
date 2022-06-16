@@ -10,12 +10,12 @@
     </select>
 
     <!-- 查看所有学生信息   -->
-    <select id="queryAllStudent"  resultType="Student">
+    <select id="queryAllStudent"  resultType="student">
         select * from student
     </select>
 
     <!--  查寻单个学生信息  -->
-    <select id="querySingleStudent" parameterType="String" resultType="Student">
+    <select id="querySingleStudent" parameterType="String" resultType="student">
         select * from student where sno = #{sno}
     </select>
 
@@ -25,19 +25,19 @@
     </select>
 
 <!--查询已选课程-->
-    <select id="querySelectedCourse" parameterType="String" resultType="CourseVo">
+    <select id="querySelectedCourse" parameterType="String" resultType="courseVo">
         select d.cno,c.cname,c.ccredit,d.score from dective d, course c
         where sno = #{sno} and d.cno = c.cno
     </select>
 
 <!--  选课与退选  -->
-    <select id="queryAllCourse" resultType="CourseVo1">
+    <select id="queryAllCourse" resultType="courseVo1">
         select c.cno,c.cname,c.ctime,c.ccredit,t.tname from course c,teacher t
         where c.tno = t.tno
     </select>
 
     <!-- 增加学生   -->
-    <insert id="addStudent" parameterType="Student">
+    <insert id="addStudent" parameterType="student">
         insert into student (sno, sname, ssex, sclass, sgrade, scollege) values
         (#{sno}, #{sname}, #{ssex}, #{sclass}, #{sgrade}, #{scollege})
     </insert>
@@ -48,7 +48,7 @@
     </delete>
 
     <!-- 修改学生   -->
-    <update id="updateStudent" parameterType="Student">
+    <update id="updateStudent" parameterType="student">
         update student set
         sname = #{sname}, spassword = #{spassword}, ssex = #{ssex}, sclass = #{sclass},
         sgrade = #{sgrade}, scollege = #{scollege} where sno = #{sno}

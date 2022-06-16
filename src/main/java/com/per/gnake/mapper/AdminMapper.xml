@@ -15,22 +15,22 @@
     </select>
 
     <!-- 管理员类   -->
-    <select id="GetAdmin" resultType="Admin">
+    <select id="GetAdmin" resultType="admin">
         select * from admin where username = #{username}
     </select>
 
     <!-- 所有学生  -->
-    <select id="GetAllStudent" resultType="Student">
+    <select id="GetAllStudent" resultType="student">
         select * from student
     </select>
 
     <!-- 所有老师  -->
-    <select id="GetAllTeacher" resultType="Teacher">
+    <select id="GetAllTeacher" resultType="teacher">
         select * from teacher
     </select>
 
     <!--  所有课程 -->
-    <select id="GetAllCourse" resultType="Course">
+    <select id="GetAllCourse" resultType="course">
         select * from course
     </select>
 </mapper>

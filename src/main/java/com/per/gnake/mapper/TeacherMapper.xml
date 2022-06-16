@@ -15,17 +15,17 @@
     </select>
 
     <!-- 查询当前教师信息   -->
-    <select id="queryTeacher" resultType="Teacher">
+    <select id="queryTeacher" resultType="teacher">
         select * from teacher where tno = #{tno}
     </select>
 
     <!--  根据老师名查找该老师信息  -->
-    <select id="queryTeacherByName" resultType="Teacher">
+    <select id="queryTeacherByName" resultType="teacher">
         select * from teacher where tname = #{tname}
     </select>
 
     <!-- 查询该老师教授的所有课程且未提交成绩的记录  -->
-    <select id="queryTeacherNeedInputScore" resultType="Score">
+    <select id="queryTeacherNeedInputScore" resultType="score">
         select c.cno,c.cname,s.sno,s.sname,s.sclass, d.score
         from student s, course c, dective d where
         d.tno = #{tno} and d.sno = s.sno and d.cno = c.cno order by c.cno, s.sno
@@ -37,13 +37,13 @@
     </delete>
 
     <!-- 增加   -->
-    <insert id="addTeacher" parameterType="Teacher">
+    <insert id="addTeacher" parameterType="teacher">
         insert into teacher (tno, tname, tsex, ttitle) values
         (#{tno}, #{tname}, #{tsex}, #{ttitle})
     </insert>
 
     <!-- 修改   -->
-    <update id="updateTeacher" parameterType="Teacher">
+    <update id="updateTeacher" parameterType="teacher">
         update teacher set tname = #{tname}, tsex = #{tsex}, ttitle = #{ttitle} where tno = #{tno}
     </update>
 </mapper>

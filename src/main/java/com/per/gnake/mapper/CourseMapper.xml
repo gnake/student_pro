@@ -10,13 +10,13 @@
     </delete>
 
     <!-- 增加   -->
-    <insert id="addCourse" parameterType="Course">
+    <insert id="addCourse" parameterType="course">
         insert into course values
         (#{cno}, #{cname}, #{ctime}, #{ccredit}, #{tno})
     </insert>
 
     <!-- 修改   -->
-    <update id="updateCourse" parameterType="Course">
+    <update id="updateCourse" parameterType="course">
         update course set cname = #{cname}, ctime = #{ctime}, ccredit = #{ccredit} where cno = #{cno}
     </update>
 </mapper>

@@ -5,24 +5,24 @@
 <mapper namespace="com.per.gnake.mapper.DectiveMapper">
 
     <!-- 插入选课记录   -->
-    <insert id="pickCourseRecord" parameterType="Dective">
+    <insert id="pickCourseRecord" parameterType="dective">
         insert into dective (sno,cno,tno) values (#{sno}, #{cno}, #{tno})
     </insert>
 
     <!-- 查询插入课程是否已经选过   -->
-    <select id="IsSelectedCourse" parameterType="Dective" resultType="Integer">
+    <select id="IsSelectedCourse" parameterType="dective" resultType="Integer">
         select count(*) from dective where
         sno = #{sno} and cno = #{cno} and tno = #{tno}
     </select>
 
     <!-- 退选已选的课程   -->
-    <delete id="DeleteCourse" parameterType="Dective">
+    <delete id="DeleteCourse" parameterType="dective">
         delete  from dective
         where sno = #{sno} and cno = #{cno} and tno = #{tno}
     </delete>
 
     <!-- 录入成绩,   -->
-    <update id="updateScore" parameterType="Dective">
+    <update id="updateScore" parameterType="dective">
         update dective set score = #{score}
         where sno = #{sno} and cno = #{cno} and tno = #{tno}
     </update>
