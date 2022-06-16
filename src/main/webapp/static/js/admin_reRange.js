@@ -16,7 +16,7 @@ function range() {
     pageNum = parseInt(pageNum);
 
     if(pageNum <= pageSum) {
-        for (var i = (pageNum - 1) * 6 + 1;i < pageNum * 6 + 1;i++) {
+        for(var i = (pageNum - 1) * 6 + 1;i < pageNum * 6 + 1;i++) {
             iTable.rows[i].style.display = 'table-row';
         }
         for(var i = 1; i < (pageNum - 1) * 6 + 1;i++) {

@@ -7,7 +7,6 @@
   String path = request.getContextPath();
   String curPath = request.getScheme() + "://" + request.getServerName()
           + ":" + request.getServerPort() + path;
-//    System.out.println(curPath);
 %>
 <html>
 <head>
