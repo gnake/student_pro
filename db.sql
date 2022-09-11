@@ -2,7 +2,7 @@
 create database javaee_cdesign;
 use javaee_cdesign;
 -- 管理员表
-create table login
+create table admin
 (
     username varchar(20) not null ,
     password varchar(16) not null ,
